@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+body {
+    height: 100%;
+}
+.menu-btn{
+color: #1a1110;
+font-size: 23px;
+cursor: pointer;
+display: none;
+}
+
+.content
+{
+    background-image:url('../img/wall2.jpg') ;
+    background-size: cover;
+background-repeat: no-repeat;
+padding: 0 5%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+color: #f1f0f4;
+height:120vh; 
+}
+.content h1 {
+    font-size: 40px;
+}
+.content p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.content button {
+    margin-top: 30px;
+    padding: 15px 30px ;
+border:none;
+background: #1a1110;
+color: white;
+font-size: 20px ;
+border-radius: 5px;
+cursor: pointer;
+}
+.pheading {
+    text-align: center;
+    margin: 50px 0;
+    color:rgb(0, 0, 0) ;
+}
+
+.sec {
+    padding: 10px 5%;
+}
+.products{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(410px,1fr));
+}
+.products .card {
+width: 310px;
+background: #f5f5f5;
+box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+border-radius: 5px;
+margin-bottom: 20px;
+}
+.products .card img {
+    height: 250px;
+    width: 100%;
+}
+.products .card .desc {
+    padding: 5px 20px ;
+    opacity: 0.8;
+}
+.products .card .title
+{
+    font-weight: 900;
+    font-size: 20px;
+    color: #424144;
+    padding: 0 20px;
+
+}
+.products .card .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.products .card .box .price
+{
+    color: #daa520;
+    font-size:20px ;
+    font-weight: bold;
+}
+.products .card .box .btn {
+    font-size: 13px;
+    color: #daa520;
+    padding: 10px 18px;
+font-weight: 900;
+border: 1px solid #daa520;
+border-radius: 20px;
+}
+.products .card .box .btn:hover{
+ cursor: pointer;
+ background-color: #daa520;
+ color: white;   
+}
+@media (max-width:820px) {
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width:100% ;
+        left: -100%;
+        top: 0;
+        background-color: #000000;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease ;
+    }
+    .navbar .menu .active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: flex;
+        justify-content: center;
+
+    }
+    .navbar .menu li a{
+        margin: 10px 0;
+        font-size: 25px;
+
+
+    }
+}

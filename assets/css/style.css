@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+/* Content area styles (if applicable) */
+.content {
+    /* Content area styles go here */
+}
+
+/* Footer styles */
+footer {
+    background-color: #1a1110;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    padding: 20px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    margin: 0 10px;
+    text-align: left;
+}
+
+.footer-column h3 {
+    color: #fff;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-row {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+}
+ 
+/* Reset some default styles */
+
+/* Header styles */
+header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.logo span{
+    color:#ffd700;;
+    font-family: 'Oswald', sans-serif;
+}
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin-left: 20px;
+    
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #ffd700;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.search-bar button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #ffd700;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #ffcc00;
+}
+
+.main-content {
+    padding: 20px;
+    /* Add other styles for the main content area as needed */
+}

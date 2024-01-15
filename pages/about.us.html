@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Our Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .home-button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Hero Section Styles */
+        .hero-intro {
+            min-height: 100vh;
+            background-color: #222;
+            color: #cec6c6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-intro-text {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .noto-kufi {
+            font-family: 'Noto Kufi Arabic', sans-serif;
+            color: #888080;
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .noto-kufi1 {
+            font-family: 'Noto Kufi Arabic', sans-serif;
+            color: #f5f5f5;
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .arrow-down {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+        }
+
+        /* Main Section Styles */
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Who we are Section Styles */
+        .bb {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            max-width: 300px;
+        }
+
+        .footer-section h3 {
+            color: #fff;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .footer-section p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section input {
+            padding: 10px;
+            flex: 1;
+            border: 1px solid #555;
+            border-radius: 4px;
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .footer-section button {
+            background-color: #555;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        /* Back to Top Button Styles */
+        #back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 600px) {
+            .footer-section {
+                flex: 0 0 100%;
+                margin-right: 0;
+            }
+        }
+
+        /* Animated Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* CSS Transitions */
+        footer {
+            transition: background-color 0.3s ease;
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #333;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero-intro">
+        <div class="hero-intro-text">
+            <h2 class="noto-kufi1">Welcome to Our Store</h2>
+            <span class="noto-kufi">Explore and Discover</span>
+        </div>
+        <div class="arrow-down" onclick="scrollToMainSection()">
+            <i class="fas fa-arrow-down fa-2x"></i>
+        </div>
+    </div>
+
+    <!-- Who we are Section -->
+    <div class="bb">
+        <h2 class="text-lead top-pad">Who we are?</h2>
+        <p class="text-sub-lead">
+            Students in Menoufia universty.
+            <br><br>
+        </p>
+    </div>
+
+    <!-- Main Section -->
+    <section id="main-section">
+        <h2>Welcome to Our Store!</h2>
+        <p>
+            We are passionate about providing high-quality products and excellent customer service. Our store is dedicated
+            to bringing you the best shopping experience with a wide range of products to choose from.
+        </p>
+
+        <h2>Our Mission</h2>
+        <p>
+            At Our Store, our mission is to make your shopping experience enjoyable, convenient, and affordable. We strive
+            to offer a diverse selection of products that meet your needs and exceed your expectations.
+        </p>
+
+        <h2>Contact Us</h2>
+        <p>
+            Have questions or concerns? Feel free to <a href="contact.html">contact us</a>. We value your feedback and are
+            here to assist you in any way we can.
+        </p>
+
+        <h2>Our Team</h2>
+        <p>
+            Meet the dedicated individuals behind Our Store. Our team is committed to providing excellent service and
+            ensuring your satisfaction.
+        </p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@ourstore.com</p>
+                <p>Phone: +123-456-7890</p>
+                <p>Address: 123 Store Street, Cityville</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" name="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2023 Our Store. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+    <!-- Script Section -->
+    <script>
+        window.onscroll = function () {
+            showBackToTopButton();
+        };
+
+        function showBackToTopButton() {
+            var button = document.getElementById("back-to-top");
+            button.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        function goHome() {
+            // Replace this with the URL of your home page
+            window.location.href = "index.html";
+        }
+
+        function goToPage(page) {
+            // Replace this with the URL of the desired page
+            window.location.href = page;
+        }
+
+        function scrollToMainSection() {
+            document.getElementById("main-section").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+
+</html>
